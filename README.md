@@ -4,7 +4,7 @@
 Kanban is a workflow management method designed to help you visualize your work and maximize efficiency.
 
 The simplest Kanban board is usually composed of three columns:
-* “Requested” 
+* “To do” 
 * “In Progress”
 * “Done”
 
