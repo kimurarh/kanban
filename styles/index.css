@@ -1,0 +1,23 @@
+#task {
+    background-color: white;
+    margin: 20px;
+
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#container #to-do {
+    background-color: red;
+    height: 500px;
+}
+
+#container #in-progress {
+    background-color: green;
+}
+
+#container #done {
+    background-color: blue;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban App</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <div id="header">
+        <h1>Kanban App</h1>
+    </div>
+
+    <div id="container">
+        <div class="title">To-Do</div>
+        <div class="title">In Progress</div>
+        <div class="title">Done</div>
+
+        <div id="to-do" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="task" draggable="true" ondragstart="drag(event)">
+                Test 1
+            </div>
+
+            <div id="task" draggable="true" ondragstart="drag(event)">
+                Test 2
+            </div>
+        </div>
+
+        <div id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+
+        <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/index.js"></script>
+</body>
+</html>
