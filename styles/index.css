@@ -1,23 +1,126 @@
-#task {
-    background-color: white;
-    margin: 20px;
+:root {
+    --bg-deck: #f4f4f4;
+    --bg-green: #2ecc40;
+    --bg-light-green: #dcffc2;
+    --bg-yellow: #ffdc00;
+    --bg-light-yellow: #ffffe0;
+    --bg-blue: #0074d9;
+    --bg-light-blue: #c4deff;
+    --bg-red: #ff4136;
+    --bg-light-red: #ffcdd7;
+}
 
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #191919;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+
+}
+
+#menu button {
+    font-size: 24px;
+    padding: 0px;
 }
 
 #container {
     display: grid;
+    margin: 30px;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
 }
 
-#container #to-do {
-    background-color: red;
-    height: 500px;
+#container .title {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px 6px 0 0;
 }
 
-#container #in-progress {
-    background-color: green;
+#container #to-do-title {
+    background-color: var(--bg-yellow);
 }
 
-#container #done {
-    background-color: blue;
+#container #in-progress-title {
+    background-color: var(--bg-blue);
 }
+
+#container #done-title {
+    background-color: var(--bg-green);
+}
+
+#container .deck {
+    border-radius: 0 0 6px 6px;
+    background-color: var(--bg-deck);
+}
+
+#container .deck .card {
+    /* background-color: lightgrey; */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 6px;
+    position: relative;
+}
+
+#container .deck .card .close-icon {
+    background-color: var(--bg-light-red);
+    height: 12px;
+    width: 12px;
+    border: var(--bg-red) 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+#container .deck .card .close-icon .tooltip-text {
+    visibility: hidden;
+    background-color: #FF4136;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+
+    position: absolute;
+    bottom: 100%;
+    left: 12px;
+    z-index: 1;
+}
+
+#container .deck .card .close-icon:hover .tooltip-text {
+    visibility: visible;
+}
+
+#container .deck .card .close-icon:hover {
+    background-color: var(--bg-red);
+}
+
+#container #to-do .card {
+    background-color: var(--bg-light-yellow);
+    border: var(--bg-yellow) solid 1px;
+}
+
+#container #in-progress .card {
+    background-color: var(--bg-light-blue);
+    border: var(--bg-blue) solid 1px;
+}
+
+#container #done .card {
+    background-color: var(--bg-light-green);
+    border: var(--bg-green) solid 1px;
+}
+
+

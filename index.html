@@ -6,35 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanban App</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-
     <div id="header">
         <h1>Kanban App</h1>
     </div>
 
+    <div id="menu">
+        <input type="text" name="add" id="new-objective" placeholder="new objective">
+        <button id="new-objective-button">+</button>
+    </div>
+
     <div id="container">
-        <div class="title">To-Do</div>
-        <div class="title">In Progress</div>
-        <div class="title">Done</div>
+        <div class="title" id="to-do-title">To-Do</div>
+        <div class="title" id="in-progress-title">In Progress</div>
+        <div class="title" id="done-title">Done</div>
 
-        <div id="to-do" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div id="task" draggable="true" ondragstart="drag(event)">
-                Test 1
-            </div>
-
-            <div id="task" draggable="true" ondragstart="drag(event)">
-                Test 2
-            </div>
+        <div id="to-do" class="deck" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <!-- This is where new objectives will be added -->
         </div>
 
-        <div id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="in-progress" class="deck" ondrop="drop(event)" ondragover="allowDrop(event)">
 
         </div>
 
-        <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="done" class="deck" ondrop="drop(event)" ondragover="allowDrop(event)">
 
         </div>
     </div>
